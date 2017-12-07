@@ -1,0 +1,62 @@
+<div class="container">
+    <app-date></app-date>
+  <div class="row">
+      <div class="col-md-3">
+          <div class="card" >
+
+              <ul class="list-group list-group-flush" id="players">
+                  <li *ngFor="let x of room.players; index as i" class="list-group-item">
+                      <img [src]="x.picture" style="width: 26px;" class="rounded" />
+                      {{x.name}}
+                  </li>
+              </ul>
+          </div>
+          
+          <div class="card" >
+              <div class="card-header">
+                  Select Workouts
+              </div>
+              <div class="form-group row">
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputWorkout3" placeholder="Workout" [(ngModel)]="workout">
+                  </div>
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputTime3" placeholder="Time (in minutes)" [(ngModel)]="time">
+                  </div>
+              </div>
+              <a class="btn btn-primary"  (click)="submit()">Submit</a>
+          </div>
+
+      </div>
+      <div class="col-md-9">
+              <div class="card" >
+                      <div class="card-body">
+                          
+                          <div class="card" >
+                                  <div class="card-header">
+                                      Workouts Completed
+                                  </div>
+                                  <table class="table table-hover">
+                                      <thead>
+                                        <tr>
+                                          <th>Workout</th>
+                                          <th>Time</th>
+                                        </tr>
+                                      </thead>
+
+                                      <tbody>
+                                        <tr>
+                                          <td>Running</td>
+                                          <td>30</td>
+                                        </tr>  
+                                        
+                                      </tbody>
+                                    </table>
+                              </div>
+                                              
+                      </div>
+                  </div>
+                  
+      </div>
+  </div>                
+</div>
